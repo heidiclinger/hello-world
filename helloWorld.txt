@@ -1,1 +1,34 @@
 Hello World!
+
+git/git hub notes
+
+q							| quit - stop viewing the current session
+cd ___ 						| change directory
+ls							| show all files in the current directory excluding hidden files
+ls -a						| show all files in the current directory including hidden files
+git init					| intializes a new git repository
+git add file.txt			| add file to the staging area (where it is ready for a commit)
+git commit					| create a commit (write a commit message as if it were a command)
+git log						| displays log of all commits
+git log --stat				| gives stats of versions
+git diff first_id seond_id	| shows difference between the commits which match the id numbers given
+git checkout commit_id		| reverts to selected version maching the id number given
+git status					| shows which files have changes since the last commit
+
+
+
+Creat Labels (Branches): Different Versions
+git branch					| shows current branches
+git branch new_name			| create new branch
+git checkout new_name		| makes selected branch primary
+git log --graph --oneline	| helps visualize branch structure
+
+
+
+
+Commands for working with GitHub
+git remote						| (with no arguments) see all current remotes
+git remote add name_to_use url	| add the repository on github as a remote (standard name to use is origin when you only have one remote)
+								| the url can be found on the github page where your repository was created
+git remote -v					| verbose: git remote will give additional information/ fetch & push
+git push argument1 argument2	| send changes to the remote || argument1: remote you want to send changes to || argument2: name of the local branch that you'd like to push
