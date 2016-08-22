@@ -2,33 +2,58 @@ Hello World!
 
 git/git hub notes
 
-q							| quit - stop viewing the current session
-cd ___ 						| change directory
-ls							| show all files in the current directory excluding hidden files
-ls -a						| show all files in the current directory including hidden files
-git init					| intializes a new git repository
-git add file.txt			| add file to the staging area (where it is ready for a commit)
-git commit					| create a commit (write a commit message as if it were a command)
-git log						| displays log of all commits
-git log --stat				| gives stats of versions
-git diff first_id seond_id	| shows difference between the commits which match the id numbers given
-git checkout commit_id		| reverts to selected version maching the id number given
-git status					| shows which files have changes since the last commit
+q | quit - stop viewing the current session
+cd ___ | change directory
+ls | show all files in the current directory excluding hidden files
+ls -a | show all files in the current directory including hidden files
+git init | intializes a new git repository
+git add file.txt | add file to the staging area (where it is ready for a commit)
+git commit | create a commit (write a commit message as if it were a command)
+git log | displays log of all commits
+git log --stat | gives stats of versions
+git diff first_id seond_id | shows difference between the commits which match the id numbers given
+git checkout commit_id | reverts to selected version maching the id number given
+git status | shows which files have changes since the last commit
 
 
 
 Creat Labels (Branches): Different Versions
-git branch					| shows current branches
-git branch new_name			| create new branch
-git checkout new_name		| makes selected branch primary
-git log --graph --oneline	| helps visualize branch structure
+git branch | shows current branches
+git branch new_name | create new branch
+git checkout new_name | makes selected branch primary
+git log --graph --oneline | helps visualize branch structure
+git merge | from the branch which you want the changes to apply to:
+	git merge branch_a branch_b || branch_a should be the branch receiving the updates || branch_b should be the branch where the changes are coming from
 
 
 
 
 Commands for working with GitHub
-git remote						| (with no arguments) see all current remotes
-git remote add name_to_use url	| add the repository on github as a remote (standard name to use is origin when you only have one remote)
-								| the url can be found on the github page where your repository was created
-git remote -v					| verbose: git remote will give additional information/ fetch & push
-git push argument1 argument2	| send changes to the remote || argument1: remote you want to send changes to || argument2: name of the local branch that you'd like to push
+git remote | (with no arguments) see all current remotes
+git remote add name_to_use url | add the repository on github as a remote in git (standard name to use is origin when you only have one remote)
+	the url can be found on the github page where your repository was created
+git remote -v | verbose: git remote will give additional information/ fetch & push
+git push argument1 argument2 | send changes to the remote || argument1: remote you want to send changes from (origin) || argument2: name of the github branch that you'd like to push changes to (master)
+git pull argument1 argument2 | pull changes from github to local files || argument1: remote you want to pull changes to (origin) || argument2: name of the github branch that you want to pull from (master)
+	note: git pull is equivilent to git fetch origin and git merge master origin/master
+
+
+
+github notes:
+selecting commits:
+	view the commit history of the local repository on github (only shows the changes that have been pushed to github)
+	this can be helpful to view if files have been pushed from other computers/users or directly to github that may not be updated on your local computer
+Forking a repository:
+	Allows you to make a copy of someone else's repository directly on the github servers without pulling down the code to your local computer first
+	To make modifications you can then pull the code onto your own computer (git clone url)
+	Helps give credit back to the person who originated the repository
+	Makes it easier to suggest changes back to the original repository
+	When you clone a repository git automatically sets up a remote (origin) pointing to the repository you cloned from
+	To allow people to collaborate with you give other github users permission by going to settings, choosing Collaborators and entering their user name
+Collaboration with others and merging changes:
+	git fetch remote_name | updates your local copy of the remote branch while leaving the actual local version alone. This allows you to use git log (git log origin) and git diff (git diff origin/master master)
+	to see what changes have been introduced. You can then incorporate those changes into your local master branch by using git merge: git merge branch_a branch_b where branch_a is the brach receiving the updates
+	and branch_b is the branch where the changes are coming from
+		In this situation a merge conflict should exist. Resolve by accessing the file, making the changes manauly, re-staging and commiting the file.
+	
+
