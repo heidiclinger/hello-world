@@ -12,6 +12,8 @@ git commit | create a commit (write a commit message as if it were a command)
 git log | displays log of all commits
 git log --stat | gives stats of versions
 git diff first_id seond_id | shows difference between the commits which match the id numbers given
+git diff --cached | Shows the changes between the index and the HEAD(which is the last commit on this branch). This shows what has been added to the index and staged for a commit.
+git diff HEAD | Shows all the changes between the working directory and HEAD (which includes changes in the index). This shows all the changes since the last commit, whether or not they have been staged for commit or not.
 git checkout commit_id | reverts to selected version maching the id number given
 git status | shows which files have changes since the last commit
 
