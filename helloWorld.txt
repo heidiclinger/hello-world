@@ -12,6 +12,7 @@ git commit | create a commit
 git commit -m "" | create a commit and add a message
 git log | displays log of all commits
 git log --stat | gives stats of versions
+git log --oneline | displays log of commits, listing one commit per line
 git diff first_id seond_id | shows difference between the commits which match the id numbers given
 git diff --cached | Shows the changes between the index and the HEAD(which is the last commit on this branch). This shows what has been added to the index and staged for a commit.
 git diff HEAD | Shows all the changes between the working directory and HEAD (which includes changes in the index). This shows all the changes since the last commit, whether or not they have been staged for commit or not.
