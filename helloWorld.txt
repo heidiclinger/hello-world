@@ -32,7 +32,8 @@ git branch new_name | create new branch
 git checkout new_name | makes selected branch primary
 git log --graph --oneline | helps visualize branch structure
 git merge | from the branch which you want the changes to apply to:
-	git merge branch_a branch_b || branch_a should be the branch receiving the updates || branch_b should be the branch where the changes are coming from
+	git merge branch_a branch_b || branch_a should be the branch receiving the updates || branch_b should be the branch where the  		changes are coming from
+git branch -d branch_name | delete specified branch from Git project once no longer needed
 
 
 
