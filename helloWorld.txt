@@ -8,6 +8,7 @@ ls | show all files in the current directory excluding hidden files
 ls -a | show all files in the current directory including hidden files
 git init | intializes a new git repository
 git add file.txt | add file to the staging area (where it is ready for a commit)
+git add . | adds all files in the working directory to the staging area
 git commit | create a commit
 git commit -m "" | create a commit and add a message
 git log | displays log of all commits
