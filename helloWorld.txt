@@ -19,7 +19,7 @@ git diff HEAD | Shows all the changes between the working directory and HEAD (wh
 git checkout commit_id | reverts to selected version maching the id number given
 git status | shows which files have changes since the last commit, including which files are is the staging area
 git reset file.txt | remove a file from the staging area while retaining the changes in the working directory
-git reset commit_SHA (where SHA is the first 7 characters of a previous commit)
+git reset commit_SHA (where commit_SHA is replaced with the first 7 characters of a previous commit)
 
 
 
