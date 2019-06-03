@@ -8,7 +8,8 @@ ls | show all files in the current directory excluding hidden files
 ls -a | show all files in the current directory including hidden files
 git init | intializes a new git repository
 git add file.txt | add file to the staging area (where it is ready for a commit)
-git commit | create a commit (write a commit message as if it were a command)
+git commit | create a commit
+git commit -m "" | create a commit and add a message
 git log | displays log of all commits
 git log --stat | gives stats of versions
 git diff first_id seond_id | shows difference between the commits which match the id numbers given
